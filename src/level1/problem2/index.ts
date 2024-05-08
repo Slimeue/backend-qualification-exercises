@@ -23,7 +23,6 @@ export class ObjectId {
     }
 
     this.data.writeBigUInt64BE(BigInt(timestamp), 0);
-    randomBytes(4).copy(this.data, 1);
     this.data.writeUIntBE(ObjectId.counter, 11, 3);
   }
 
